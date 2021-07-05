@@ -13,22 +13,26 @@ var listanumeri = "";
 
 // ciclo per stampare numeri d 1 a 100
 
-for (var i = 1; i <= 100; i++){
-    listanumeri = listanumeri + " " + i;
+for (var i = 1; i < 101; i++){
+    listanumeri = listanumeri + ' ' + i + ' ';
+
+
+    list.innerHTML = '<li>' + listanumeri + '</li>';
+
+    // sistema divisibilitàa
     if (i % 3 == 0) {
-        listanumeri = listanumeri + " Fizz ";
+        listanumeri = listanumeri + "Fizz";
     } if (i % 5 == 0) {
-        listanumeri = listanumeri + " buzz ";
-    } else if (i % 3 == 0 && i % 5 == 0) {
-        listanumeri = listanumeri + " FizzBuzz ";
+        listanumeri = listanumeri + "Buzz";
     }
-    
+    else if (i % 3 == 0 && i % 5 == 0) {
+        listanumeri = listanumeri + "FizzBuzz";
+    }
 }
 
-list.innerHTML = '<li>' + listanumeri + '</li>';
 
 
-// sistema per identificare le varie divisibilità
+
 
 
 
