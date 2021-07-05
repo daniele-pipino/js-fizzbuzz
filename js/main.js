@@ -2,15 +2,33 @@
 // ma per i multipli di 3 stampi “Fizz” al posto del numero e per i multipli di 5 stampi Buzz.
 // Per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz.
 
-// ciclo per stampare numeri d 1 a 100
+
 
 // recupero elemento html
-var text = document.getElementById('numberlist');
 
+var list = document.getElementById('numberlist');
+
+var listanumeri = "";
+
+
+// ciclo per stampare numeri d 1 a 100
 
 for (var i = 1; i <= 100; i++){
-    text.innerHTML = '<li>' + i + '</li>';
+    listanumeri = listanumeri + " " + i;
+    if (i % 3 == 0) {
+        listanumeri = listanumeri + " Fizz ";
+    } if (i % 5 == 0) {
+        listanumeri = listanumeri + " buzz ";
+    } else if (i % 3 == 0 && i % 5 == 0) {
+        listanumeri = listanumeri + " FizzBuzz ";
+    }
+    
 }
 
+list.innerHTML = '<li>' + listanumeri + '</li>';
+
+
 // sistema per identificare le varie divisibilità
+
+
 
