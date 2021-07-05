@@ -13,25 +13,21 @@ var listanumeri = "";
 
 // ciclo per stampare numeri d 1 a 100
 
-for (var i = 1; i < 101; i++){
-    listanumeri = listanumeri + ' ' + i + ' ';
-
-
-    list.innerHTML = '<li>' + listanumeri + '</li>';
+for (var i = 1; i <= 100; i++){
+    listanumeri += '<li>' + i + '</li>';
 
     // sistema divisibilitàa
-    if (i %3== 0) {
-        listanumeri = listanumeri + "Fizz";
+    if (i % 3 == 0) {
+        listanumeri += 'fizz';
+        console.log('Divisibili per 3: ', i);
     }if (i % 5 == 0) {
-        listanumeri = listanumeri + "Buzz";
+        listanumeri += 'buzz';
+        console.log('divisibili per 5:', i);
     }
-   
    
 }
 
 
-
-
-
+list.innerHTML = listanumeri;
 
 
