@@ -4,5 +4,13 @@
 
 // ciclo per stampare numeri d 1 a 100
 
+// recupero elemento html
+var text = document.getElementById('numberlist');
+
+
+for (var i = 1; i <= 100; i++){
+    text.innerHTML = '<li>' + i + '</li>';
+}
+
 // sistema per identificare le varie divisibilità
 
