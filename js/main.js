@@ -11,22 +11,21 @@ var list = document.getElementById('numberlist');
 var listanumeri = "";
 
 
-// ciclo per stampare numeri d 1 a 100
+// ciclo per stampare numeri da 1 a 100
 
-for (var i = 1; i <= 100; i++){
-    listanumeri += '<li>' + i + '</li>';
+for (var i = 1; i <= 100; i++) {
 
-    // sistema divisibilitàa
-    if (i % 3 == 0) {
-        listanumeri += 'fizz';
-        console.log('Divisibili per 3: ', i);
-    }if (i % 5 == 0) {
-        listanumeri += 'buzz';
-        console.log('divisibili per 5:', i);
+    if (i % 3 == 0 && i % 5 == 0) {
+        listanumeri += '<li>' + "fizzbuzz" + '</li>';
+    } else if (i % 3 == 0) {
+        listanumeri += '<li>' + " fizz " + '</li>';
+    } else if (i % 5 == 0) {
+        listanumeri += '<li>' + " buzz " + '</li>';
+    } else {
+        listanumeri += '<li>' + i + '</li>';
     }
-   
-}
 
+};
 
 list.innerHTML = listanumeri;
 
